@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="./calculator.html" id="getCalculator">Calculator</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div id="load_main">    
+  
+<!-- insert code here -->
+<div class="row">
+   <h2>Calculator</h2>
+   <p>A simple calculator.</p>
+   <div class="col-md-4"> 
+      <button type="button" class="btn btn-primary">+</button>
+      <button type="button" class="btn btn-primary">-</button>
+      <button type="button" class="btn btn-primary">*</button>
+      <button type="button" class="btn btn-primary">/</button>
+   </div>
+   <div class="col-md-2">
+      Result: <span id="result"></span>
+   </div>
+</div>
+
+<div class="row">
+   <div class="col-md-4"> 
+      <button id="7" type="button" class="btn btn-primary">7</button>
+      <button id="8" type="button" class="btn btn-primary">8</button>
+      <button id="9" type="button" class="btn btn-primary">9</button>
+   </div> 
+</div>
+
+<div class="row">   
+   <div class="col-md-4"> 
+      <button id="4" type="button" class="btn btn-primary">4</button>
+      <button id="5" type="button" class="btn btn-primary">5</button>
+      <button id="6" type="button" class="btn btn-primary">6</button>
+   </div>
+</div>
+
+<div class="row"> 
+   <div class="col-md-4"> 
+      <button id="1" type="button" class="btn btn-primary">1</button>
+      <button id="2" type="button" class="btn btn-primary">2</button>
+      <button id="3" type="button" class="btn btn-primary">3</button>
+   </div>
+</div>
+
+</div><!--load main /div -->
+
+Or enter a number: <input type="text" id="myText" value="">
+
+<button id="sampleCompute">Enter</button>
+
+  <script src="jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
