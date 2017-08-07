@@ -52,3 +52,64 @@ $("#answer").on('click', function() {
         alert("Please ask a question");
         }
 });
+
+//mindreader
+    // pseudorandom object generator
+    var guesses = ['h', 't']
+    var random;
+    var winning = 10;
+    var computerScore = 0;
+    var playerScore = 0;
+    var playerGuess;
+    $("#angry").hide();
+    $("#happy").hide();
+    $("#win").hide();
+    $("#lose").hide();
+    $("#mindreader").on("click", function() {
+        playerGuess = $("#hort").val();
+        random = guesses[Math.floor(Math.random() * guesses.length)];
+        console.log(random);
+        if (!(playerGuess.indexOf("h") > -1 || playerGuess.indexOf("t") > -1))
+        {
+           playerGuess = "";
+           alert("Please enter h or t");
+        }
+        var computerGuess = random;
+        if (computerGuess === playerGuess)
+        {
+            console.log("Yes!  I too predicted " + computerGuess);
+            computerScore++;
+            $("#happy").show();
+            $("#initial").hide();
+            $("#angry").hide();
+        }
+        else
+        {
+            console.log("No.  I predicted " + computerGuess);
+            playerScore++;
+            $("#angry").show();
+            $("#initial").hide();
+            $("#happy").hide();
+        }
+           console.log('player: ' + playerScore + ' / computer: ' + computerScore);
+        $("#hort").val('');
+        if (playerScore === winning)
+        {
+            console.log("You win!");
+            $("#gameover").hide();
+            $("#happy").hide();
+            $("#angry").hide();
+            $("#win").show();
+        }
+        else if (computerScore === winning)
+        {
+            console.log("Sorry, you lost");
+            $("#gameover").hide();
+            $("#happy").hide();
+            $("#angry").hide();
+            $("#lose").show();
+        }
+    })
+
+//hangman
+
